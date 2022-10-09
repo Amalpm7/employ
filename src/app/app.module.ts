@@ -6,7 +6,16 @@ import { AppComponent } from './app.component';
 import { AddemployComponent } from './addemploy/addemploy.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SearchemployComponent } from './searchemploy/searchemploy.component';
+import { RouterModule, Routes } from '@angular/router';
 
+const appRoutes:Routes=[
+  {
+    path:"",component:AddemployComponent
+  },
+  {
+    path:"search",component:SearchemployComponent
+  }
+]
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +25,8 @@ import { SearchemployComponent } from './searchemploy/searchemploy.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
