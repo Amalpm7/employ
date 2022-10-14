@@ -8,6 +8,14 @@ import { Component, OnInit } from '@angular/core';
 export class SearchemployComponent implements OnInit {
 
   constructor() { }
+  employCode=""
+  readValue=()=>{
+    let data={
+      "employCode":this.employCode
+      
+    }
+    console.log(data)
+  }
 
   ngOnInit(): void {
   }
